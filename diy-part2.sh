@@ -34,13 +34,13 @@ CONFIG_MMC_SDHCI_XENON=y
 CONFIG_MMC_SDRICOH_CS=y
 CONFIG_MMC_VUB300=y
 CONFIG_MMC_MTK=y
-' >> ./target/linux/x86/generic/config-6.1
+' >> ./target/linux/x86/generic/config-5.15
 
 exit 0
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=6.1/g' target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.15/g' target/linux/x86/Makefile
 
 #sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings

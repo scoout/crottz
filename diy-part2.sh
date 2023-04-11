@@ -23,12 +23,12 @@ CONFIG_MMC_SDHCI_PCI=y
 CONFIG_MMC_TIFM_SD=y
 CONFIG_TIFM_CORE=y
 CONFIG_TIFM_7XX1=y
-' >> ./target/linux/x86/generic/config-5.15
+' >> ./target/linux/x86/generic/config-5.10
 exit 0
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.15/g' target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.10/g' target/linux/x86/Makefile
 
 #sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
